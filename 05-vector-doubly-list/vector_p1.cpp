@@ -1,3 +1,13 @@
+/*
+ * 05-vector-doubly-list / vector_p1.cpp
+ * ------------------------------------------------------------
+ * [문제] 동적 배열(std::vector 흉내) 직접 구현 + count_over
+ *   - 명령: push_back v / insert i v / erase i / set i v /
+ *           size / capacity / print / count_over v
+ *   - count_over: 값이 v보다 "큰" 원소의 개수 출력.
+ * [핵심] 가득 차면 capacity를 2배로 늘리는 resize(용량 더블링) →
+ *        push_back 분할상환(amortized) O(1). capacity 명령으로 내부 용량 확인.
+ */
 #include <iostream>
 #include <string>
 using namespace std;

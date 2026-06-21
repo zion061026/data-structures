@@ -1,4 +1,12 @@
-#include <iostream>#include <iostream>
+/*
+ * 09-heap / q4.cpp
+ * ------------------------------------------------------------
+ * [문제] 최소 힙 기반 스케줄러 + 취소/수정  (q3의 변형)
+ *   - 명령: submit / execute / peek / count / cancel p / update p q (q3와 동일)
+ * [핵심] q3와 같으나 compare가 left<right이라 최소 힙. cancel/update 후
+ *        upheap·downheap 양쪽 호출로 힙 성질 복구.
+ */
+#include <iostream>
 #include <string>
 #include <vector>
 using namespace std;

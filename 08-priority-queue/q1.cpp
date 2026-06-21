@@ -1,3 +1,14 @@
+/*
+ * 08-priority-queue / q1.cpp
+ * ------------------------------------------------------------
+ * [문제] 정렬되지 않은 리스트 기반 우선순위 큐
+ *   - 명령: Push v / Top(최댓값) / Pop(최댓값 제거) /
+ *           Print_Bottom k(가장 작은 k개) / Print_Med(중앙값) /
+ *           Sum_Under(중앙값보다 작은 값들의 합)
+ *   - 빈 큐 연산은 "empty"(Sum_Under는 0) 출력.
+ * [핵심] 원소는 정렬 없이 list에 보관 → Top/Pop은 매번 선형 탐색 O(n).
+ *        통계 명령은 버블 정렬한 임시 vector로 계산.
+ */
 #include <iostream>
 #include <list>
 #include <vector>

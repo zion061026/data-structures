@@ -1,3 +1,14 @@
+/*
+ * 10-bst-map / q3.cpp
+ * ------------------------------------------------------------
+ * [문제] BST 맵 5개로 만드는 창고 재고 관리
+ *   - 창고 B[1..5], 각 창고는 key=물품ID → value=수량인 BST.
+ *   - import N ID c : N번 창고에 ID 물품 c개 입고(이미 있으면 수량 +c).
+ *   - export N ID c : N번 창고에서 c개 출고. 부족하면 "shortage". 0이 되면 노드 삭제.
+ *   - transfer N M ID c : N→M으로 c개 이동(N 부족 시 shortage, 가진 만큼만 옮기기도).
+ *   - check ID : 모든 창고에 있는 ID 수량의 총합 출력.
+ * [핵심] 수량 0이 되면 BST에서 erase. 두 자식 삭제는 successor로 키/값을 끌어와 처리.
+ */
 #include <iostream>
 #include <string>
 using namespace std;

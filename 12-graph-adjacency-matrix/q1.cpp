@@ -1,3 +1,13 @@
+/*
+ * 12-graph-adjacency-matrix / q1.cpp
+ * ------------------------------------------------------------
+ * [문제] 인접 행렬 그래프 (무방향) — 간선 질의
+ *   - 명령: insert_vertex v / insert_edge v1 v2 eid / is_adjacent v1 v2 /
+ *           erase_vertex v / erase_edge eid / incident_edges v
+ *   - incident_edges: v에 연결된 간선 id들을 오름차순 출력(없으면 -1).
+ * [핵심] matrix[i][j]에 간선 id를 저장(0=없음). 정점 추가 시 행렬을 한 칸씩 확장.
+ *        정점/간선 id ↔ 행렬 인덱스는 vids/eids 배열로 선형 매핑.
+ */
 #include <iostream>
 #include <list>
 #include <vector>

@@ -1,3 +1,11 @@
+/*
+ * 11-hash-table / q2.cpp
+ * ------------------------------------------------------------
+ * [문제] 개방 주소법 해시 테이블 — 선형 탐사(후진)  (q1의 변형)
+ *   - 명령: stock / release / check / space / probe (q1과 동일).
+ * [핵심] q1과 같으나 충돌 시 index-1(원형, compress(index-1+N))로 역방향 탐사.
+ *        삭제는 AVAILABLE 표시(lazy deletion).
+ */
 #include <iostream>
 #include <string>
 using namespace std;
@@ -45,22 +53,6 @@ public:
 		}
 		return nullptr;
 	}
-	//void probe(int key) {
-	//	int hash = hash_code(key);
-	//	int index = compress(index - 1 + N);
-	//	int probe = 1;
-	//	while (probe <= N) {
-	//		if (bucket[index].status == Status::NOITEM) {
-	//			cout << probe << '\n'; return;
-	//		}
-	//		if (bucket[index].status == Status::ISITEM && bucket[index].key == key) {
-	//			cout << probe << '\n'; return;
-	//		}
-	//		probe++;
-	//		index = compress(index - 1 + N);
-	//	}
-	//	cout << probe << '\n';
-	//}
 	bool stock(int key, string value) {
 		int hash = hash_code(key);
 		int index = compress(hash);

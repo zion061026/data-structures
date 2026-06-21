@@ -1,3 +1,14 @@
+/*
+ * 06-general-tree / p1.cpp
+ * ------------------------------------------------------------
+ * [문제] 일반 트리(자식 수 제한 없음) + depth 질의
+ *   - 루트는 값 1. 명령: insert p c / erase x / parent x / children x / depth x
+ *   - insert p c: 부모 p 아래에 자식 c 추가(c가 이미 있거나 p가 없으면 -1).
+ *   - erase x: x와 그 서브트리 전체 제거(루트는 제거 불가).
+ *   - depth x: 루트에서 x까지의 깊이(루트=0) 출력.
+ * [핵심] 각 노드는 children(list)과 parent 포인터를 가짐. node_seq(전체 노드
+ *        리스트)에서 값으로 선형 탐색. erase는 자식부터 재귀 삭제.
+ */
 #include <iostream>
 #include <list>
 #include <vector>

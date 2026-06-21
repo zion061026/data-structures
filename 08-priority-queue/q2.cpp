@@ -1,3 +1,12 @@
+/*
+ * 08-priority-queue / q2.cpp
+ * ------------------------------------------------------------
+ * [문제] 정렬 삽입 기반 우선순위 큐
+ *   - 명령: Push v / Pop(맨 앞=최솟값 제거) / Top /
+ *           Print_Top k / Print_Med(중앙값) / Sum_Over(중앙값 초과 합)
+ * [핵심] push 시 compare functor로 올바른 위치를 찾아 삽입 → 항상 오름차순 유지.
+ *        덕분에 front가 곧 최솟값, k번째 접근·중앙값 계산이 단순.
+ */
 #include <iostream>
 #include <list>
 #include <vector>

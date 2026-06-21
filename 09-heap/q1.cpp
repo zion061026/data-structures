@@ -1,3 +1,13 @@
+/*
+ * 09-heap / q1.cpp
+ * ------------------------------------------------------------
+ * [문제] 배열 기반 이진 최대 힙(max-heap)
+ *   - 명령: push v / pop(최댓값 제거) / top / size / print
+ *   - 빈 힙에서 pop/top은 "empty" 출력.
+ * [핵심] elements[0]은 사용하지 않고 1번부터 사용 → 부모 i/2, 자식 2i·2i+1.
+ *        push 후 upheap(상향), pop 시 마지막 원소를 루트로 올린 뒤 downheap(하향).
+ *        compare functor가 left>right이면 최대 힙, 부등호만 바꾸면 최소 힙.
+ */
 #include <iostream>
 #include <string>
 #include <vector>

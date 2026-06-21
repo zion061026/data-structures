@@ -1,3 +1,11 @@
+/*
+ * 05-vector-doubly-list / vector_p2.cpp
+ * ------------------------------------------------------------
+ * [문제] 동적 배열 + count_under  (vector_p1의 변형)
+ *   - 명령: push_back / insert / erase / set / size / capacity / print / count_under v
+ *   - count_under: 값이 v보다 "작은" 원소의 개수 출력.
+ * [핵심] vector_p1과 동일(용량 더블링), 비교 방향만 반대.
+ */
 #include <iostream>
 #include <string>
 using namespace std;

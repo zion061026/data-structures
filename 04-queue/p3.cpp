@@ -1,3 +1,11 @@
+/*
+ * 04-queue / p3.cpp
+ * ------------------------------------------------------------
+ * [문제] 큐 + average  (p1의 변형: 합 → 평균)
+ *   - 명령: push v / pop / front / size / empty / average
+ *   - average: 큐 원소들의 정수 평균(합 / 개수) 출력.
+ * [핵심] p1과 동일, 마지막에 size로 나눔.
+ */
 #include <iostream>
 #include <string>
 using namespace std;

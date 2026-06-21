@@ -1,3 +1,14 @@
+/*
+ * 13-graph-adjacency-list / q3.cpp
+ * ------------------------------------------------------------
+ * [문제] 인접 리스트 + BFS — 지하철 노선망 최단 거리
+ *   - 정점=역, 간선=구간(노선). 명령:
+ *       open_station s / connect u v r(구간 r로 연결) /
+ *       close_station s / remove_section r /
+ *       distance u v(u→v 최소 환승/구간 수, 도달 불가 -1) /
+ *       farthest s(s에서 가장 먼 역까지의 거리)
+ * [핵심] 가중치 없는 그래프이므로 BFS로 최단 거리 계산(dist=-1은 미방문/도달불가).
+ */
 #include <iostream>
 #include <vector>
 #include <queue>

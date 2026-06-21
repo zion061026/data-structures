@@ -1,3 +1,11 @@
+/*
+ * 07-binary-tree / p3.cpp
+ * ------------------------------------------------------------
+ * [문제] 이진 트리 + Subtract  (p1의 변형: Add → Subtract)
+ *   - 명령: Insert x v left|right / Erase v / Find v / Subtract v
+ *   - Subtract v: (왼자식 + 오른자식 − 부모) 값 출력(없는 쪽은 0).
+ * [핵심] p1과 동일 구조, 마지막 계산만 다름.
+ */
 #include <iostream>
 #include <list>
 #include <vector>

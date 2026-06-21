@@ -1,4 +1,13 @@
-﻿#include <iostream>
+﻿/*
+ * 05-vector-doubly-list / doubly_list_p2.cpp
+ * ------------------------------------------------------------
+ * [문제] 센티넬 양방향 리스트 + 커서 왕복 게임 (doubly_list_p1의 변형)
+ *   - 0..N-1을 넣고 이번엔 커서를 "마지막 원소"(--end())에서 시작.
+ *   - 명령: rotate k / check / reverse / add x p / eat
+ *     (의미는 p1과 동일: 양끝에서 튕기는 왕복 이동, eat은 출력 후 제거)
+ * [핵심] isReversed 플래그로 진행 방향 관리. 끝/처음 도달 시 방향 전환.
+ */
+#include <iostream>
 using namespace std;
 
 class Node {
@@ -107,13 +116,13 @@ int main() {
 			l.push_back(i);
 		}
 		bool isReversed = false;
-		List::iterator it = --l.end(); //iterator �� ������ �� ���÷� ����
+		List::iterator it = --l.end(); // 커서를 마지막 원소에서 시작
 		for (int j = 0; j < Q; j++) {
 			cin >> cmd;
 			if (cmd == "rotate") {
 				int value; cin >> value;
 				for (int i = 0; i < value; i++) {
-					if (isReversed) { //�ݴ��ΰ��
+					if (isReversed) { // 역방향일 때
 						if (it == l.begin()) {
 							isReversed = false;
 							++it;

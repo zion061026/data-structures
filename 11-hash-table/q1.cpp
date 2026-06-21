@@ -1,3 +1,13 @@
+/*
+ * 11-hash-table / q1.cpp
+ * ------------------------------------------------------------
+ * [문제] 개방 주소법(open addressing) 해시 테이블 — 선형 탐사(전진)
+ *   - 명령: stock key value(삽입, 탐사 횟수 출력) / release key(삭제, 값 출력) /
+ *           check key(값 조회, 없으면 None) / space(빈 칸 수) / probe key(탐사 횟수)
+ *   - 버킷 상태는 enum Status: ISITEM(사용중) / NOITEM(한 번도 안 씀) / AVAILABLE(삭제됨).
+ * [핵심] 해시 위치에서 충돌하면 index+1로 한 칸씩 선형 탐사(원형). 삭제는
+ *        실제로 비우지 않고 AVAILABLE로 표시(lazy deletion)해 탐사 사슬을 보존.
+ */
 #include <iostream>
 #include <string>
 using namespace std;
@@ -45,22 +55,6 @@ class Hash {
 			}
 			return nullptr;
 		}
-		//void probe(int key) { 이게 더 깔끔하네 싯팔...
-		//	int hash = hash_code(key);
-		//	int index = compress(hash);
-		//	int probe = 1;
-		//	while (probe <= N) {
-		//		if (bucket[index].status == Status::NOITEM) {
-		//			cout << probe << '\n'; return;
-		//		}
-		//		if (bucket[index].status == Status::ISITEM && bucket[index].key == key) {
-		//			cout << probe << '\n'; return;
-		//		}
-		//		probe++;
-		//		index = compress(index + 1);	
-		//	}
-		//	cout << probe << '\n';
-		//}
 		bool stock(int key, string value) {
 			int hash = hash_code(key);
 			int index = compress(hash);

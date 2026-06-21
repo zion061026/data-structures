@@ -1,3 +1,14 @@
+/*
+ * 07-binary-tree / p4.cpp
+ * ------------------------------------------------------------
+ * [문제] 이진 트리 순회 + 누적합 + LCA  (p2의 변형: 순회 순서가 다름)
+ *   - 명령:
+ *       Insert x v left|right
+ *       Inorder_travel x : 중위 순서로 방문 노드를 출력하며 x에서 멈춤(없으면 -1).
+ *       Preorder_sum x : 전위 순서로 누적합이 x를 처음 초과하는 노드 출력(없으면 -1).
+ *       LCA x y : 최소 공통 조상.
+ * [핵심] p2와 동일 기법(bool 반환 조기 종료), travel/sum의 순회 순서만 교차.
+ */
 #include <iostream>
 #include <list>
 #include <vector>

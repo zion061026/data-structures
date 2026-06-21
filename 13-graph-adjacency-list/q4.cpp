@@ -1,3 +1,11 @@
+/*
+ * 13-graph-adjacency-list / q4.cpp
+ * ------------------------------------------------------------
+ * [문제] 지하철 노선망 BFS (q3의 변형: farthest의 의미가 다름)
+ *   - 명령은 q3와 동일하나, farthest s는 "가장 먼 거리"가 아니라
+ *     그 최대 거리에 있는 역들 중 가장 작은 역 번호를 출력.
+ * [핵심] BFS로 dist를 구한 뒤, 최대 거리 max를 찾고 dist==max인 정점 중 최소 vid 선택.
+ */
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -140,31 +148,3 @@ int main() {
     }
     cout << flush;
 }
-
-// private에 추가
-//vector<int> dfs_result;
-//
-//void dfs(int cur_idx, vector<bool>& visited) {
-//    visited[cur_idx] = true;
-//    dfs_result.push_back(vids[cur_idx]);  // 방문 순서 기록
-//
-//    for (auto& p : adj[cur_idx]) {
-//        int next = vidx(p.first);
-//        if (!visited[next]) {
-//            dfs(next, visited);
-//        }
-//    }
-//}
-
-// public에 추가
-//void dfs_from(int s) {
-//    int si = vidx(s);
-//    if (si < 0) { cout << -1 << '\n'; return; }
-//
-//    vector<bool> visited(vids.size(), false);
-//    dfs_result.clear();
-//    dfs(si, visited);
-//
-//    for (int v : dfs_result) cout << v << ' ';
-//    cout << '\n';
-//}

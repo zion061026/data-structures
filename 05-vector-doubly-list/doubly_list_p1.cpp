@@ -1,4 +1,20 @@
-﻿#include <iostream>
+﻿/*
+ * 05-vector-doubly-list / doubly_list_p1.cpp
+ * ------------------------------------------------------------
+ * [문제] 센티넬(header/trailer) 양방향 리스트 + 커서 왕복 이동 게임
+ *   - 0..N-1을 리스트에 넣고 커서를 begin에 둠.
+ *   - 명령:
+ *       rotate k : 커서를 k칸 이동. 끝(trailer 직전)에 닿으면 방향을 뒤집어
+ *                  되돌아온다(원형이 아니라 양끝에서 튕기는 왕복 이동).
+ *       eat      : 현재 커서 값을 출력하고 그 노드를 제거. 진행 방향으로 커서 이동.
+ *       reverse  : 진행 방향 토글.
+ *       check    : 현재 커서 값 출력.
+ *       add x p  : begin에서 p칸 위치에 값 x 삽입.
+ * [핵심] header/trailer 센티넬로 삽입/삭제 시 nullptr 분기를 없앰.
+ *        reverse 플래그 + 끝 도달 시 방향 전환으로 왕복(bounce) 순회 구현.
+ *        중첩 클래스 iterator로 std 스타일 순회를 흉내.
+ */
+#include <iostream>
 #include <string>
 using namespace std;
 class Node {

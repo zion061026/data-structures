@@ -1,3 +1,14 @@
+/*
+ * 12-graph-adjacency-matrix / q3.cpp
+ * ------------------------------------------------------------
+ * [문제] 인접 행렬로 만드는 친구 관계(SNS) — 공통 친구
+ *   - 정점=사용자, 간선=친구 관계.
+ *   - 명령: signup id / make_friend id1 id2 eid / leave id / break_friend eid /
+ *           popularity id(친구 수=차수) / mutual_friends u v(공통 친구 id 오름차순)
+ *   - 없는 사용자 등 오류 상황은 "error"/-1 출력.
+ * [핵심] popularity는 한 행의 0 아닌 칸 수. mutual_friends는 두 정점의
+ *        이웃 목록을 교집합.
+ */
 #include <iostream>
 #include <list>
 #include <vector>

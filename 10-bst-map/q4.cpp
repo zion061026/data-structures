@@ -1,3 +1,10 @@
+/*
+ * 10-bst-map / q4.cpp
+ * ------------------------------------------------------------
+ * [문제] 창고 재고 관리 (q3와 같은 문제, transfer 구현 차이)
+ *   - 명령: import / export / transfer / check (의미는 q3와 동일).
+ * [핵심] q3와 동일한 BST 맵 5개. transfer에서 이동 후 수량 0이면 erase 처리.
+ */
 #include <iostream>
 #include <string>
 using namespace std;

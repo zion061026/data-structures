@@ -1,3 +1,11 @@
+/*
+ * 13-graph-adjacency-list / q2.cpp
+ * ------------------------------------------------------------
+ * [문제] 인접 리스트 그래프 (q1의 변형)
+ *   - 명령: insert_vertex / insert_edge / erase_vertex / erase_edge /
+ *           find_edge u v / edges
+ * [핵심] q1과 동일한 인접 리스트 구조(여기선 edges/find_edge 위주).
+ */
 #include <iostream>
 #include <list>
 #include <vector>

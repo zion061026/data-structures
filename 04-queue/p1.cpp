@@ -1,3 +1,12 @@
+/*
+ * 04-queue / p1.cpp
+ * ------------------------------------------------------------
+ * [문제] 연결 리스트 기반 큐(FIFO) + sum_elements
+ *   - 명령: push v / pop / front / size / empty / sum_elements
+ *   - pop은 빼낸 값을 출력(빈 큐면 -1).
+ *   - sum_elements: 큐에 있는 모든 값의 합 출력.
+ * [핵심] front/rear 포인터로 push(뒤)·pop(앞) O(1). 원소 1개 예외 처리.
+ */
 #include <iostream>
 #include <string>
 using namespace std;

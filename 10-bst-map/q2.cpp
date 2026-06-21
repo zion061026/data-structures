@@ -1,3 +1,12 @@
+/*
+ * 10-bst-map / q2.cpp
+ * ------------------------------------------------------------
+ * [문제] BST 맵 + subtree_size / range  (q1의 변형: height → 서브트리 크기)
+ *   - 명령: insert key value / find key /
+ *           subtree_size key(그 노드를 루트로 하는 서브트리의 노드 수, 없으면 -2) /
+ *           range k1 k2
+ * [핵심] subtree_size = 1 + 왼쪽 서브트리 크기 + 오른쪽 서브트리 크기(재귀).
+ */
 #include <iostream>
 #include <string>
 using namespace std;

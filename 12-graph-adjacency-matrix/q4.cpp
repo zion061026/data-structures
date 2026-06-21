@@ -1,3 +1,13 @@
+/*
+ * 12-graph-adjacency-matrix / q4.cpp
+ * ------------------------------------------------------------
+ * [문제] SNS 친구 그래프 — 친구 추천 (q3의 변형)
+ *   - 명령: signup / make_friend / leave / break_friend / popularity /
+ *           recommend_friend u
+ *   - recommend_friend: u의 "친구의 친구"(거리 2이며 아직 친구가 아닌 사람)를
+ *     오름차순 추천(없으면 -1).
+ * [핵심] dist 배열로 직접 친구(1)를 표시한 뒤, 친구를 경유해 닿는 새 정점(2)을 수집.
+ */
 #include <iostream>
 #include <list>
 #include <vector>

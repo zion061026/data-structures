@@ -1,3 +1,13 @@
+/*
+ * 07-binary-tree / p1.cpp
+ * ------------------------------------------------------------
+ * [문제] 이진 트리(left/right) 명령 처리 + Add
+ *   - 루트=1. 명령: Insert x v left|right / Erase v / Find v / Add v
+ *   - Insert: 부모 x의 지정 방향에 v 삽입(그 자리가 이미 차 있으면 -1).
+ *   - Find v: 존재하면 1, 없으면 -1.
+ *   - Add v: v의 (왼자식 + 오른자식 + 부모) 값의 합 출력(없는 쪽은 0).
+ * [핵심] 노드는 left/right/parent 포인터 보유, 방향은 enum class side로 구분.
+ */
 #include <iostream>
 #include <list>
 #include <vector>

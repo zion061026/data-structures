@@ -1,3 +1,12 @@
+/*
+ * 12-graph-adjacency-matrix / q2.cpp
+ * ------------------------------------------------------------
+ * [문제] 인접 행렬 그래프 — 인접 정점 질의 (q1의 변형)
+ *   - 명령: insert_vertex / insert_edge / is_adjacent / erase_vertex /
+ *           erase_edge / adjacent_vertices v
+ *   - adjacent_vertices: v와 인접한 정점 id들을 오름차순 출력(없으면 -1).
+ * [핵심] q1과 동일 구조, 출력 대상이 "간선 id" → "이웃 정점 id"로 바뀜.
+ */
 #include <iostream>
 #include <list>
 #include <vector>

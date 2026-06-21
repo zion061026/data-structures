@@ -1,3 +1,13 @@
+/*
+ * 13-graph-adjacency-list / q1.cpp
+ * ------------------------------------------------------------
+ * [문제] 인접 리스트 그래프 (무방향)
+ *   - 명령: insert_vertex v / insert_edge u v eid / erase_vertex v /
+ *           erase_edge eid / find_edge u v / edges / vertices
+ *   - find_edge: u-v를 잇는 간선 id(없으면 -1). edges/vertices: 전체 id 오름차순.
+ * [핵심] adj[i] = {(이웃 vid, eid), ...} 형태의 인접 리스트.
+ *        무방향이라 간선은 양쪽 리스트에 모두 추가/삭제.
+ */
 #include <iostream>
 #include <vector>
 #include <algorithm>

@@ -1,3 +1,14 @@
+/*
+ * 10-bst-map / q1.cpp
+ * ------------------------------------------------------------
+ * [문제] 이진 탐색 트리 맵(key→value) + height / range
+ *   - 명령: insert key value / find key(없으면 -1) /
+ *           height key(노드 높이, 없으면 -2) /
+ *           range k1 k2(키가 [k1,k2]인 항목의 value를 키 오름차순 출력, 없으면 -3)
+ *   - 외부(리프) 노드의 높이는 0으로 정의.
+ * [핵심] BST 삽입/탐색은 키 비교로 좌/우 이동. range는 시작 노드를 찾은 뒤
+ *        successor(중위 후속자)로 오름차순 순회.
+ */
 #include <iostream>
 #include <string>
 using namespace std;

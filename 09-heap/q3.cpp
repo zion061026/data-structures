@@ -1,4 +1,13 @@
-#include <iostream>
+/*
+ * 09-heap / q3.cpp
+ * ------------------------------------------------------------
+ * [문제] 최대 힙 기반 작업 스케줄러 + 임의 원소 취소/수정
+ *   - 명령: submit v(push) / execute(pop, 값 출력) / peek(top) / count(size) /
+ *           cancel p(값 p인 원소 삭제, 없으면 "not_found") / update p q(값 p를 q로 변경)
+ *   - 빈 힙에서 execute/peek는 "idle" 출력.
+ * [핵심] cancel/update는 값으로 위치를 선형 탐색한 뒤, 힙 성질이 위·아래
+ *        어느 쪽으로 깨질지 모르므로 upheap·downheap을 둘 다 호출해 복구.
+ */
 #include <iostream>
 #include <string>
 #include <vector>

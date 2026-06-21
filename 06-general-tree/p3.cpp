@@ -1,3 +1,11 @@
+/*
+ * 06-general-tree / p3.cpp
+ * ------------------------------------------------------------
+ * [문제] 일반 트리 + ancestor 질의 (p1의 변형: depth → 조상 나열)
+ *   - 명령: insert p c / erase x / parent x / children x / ancestor x
+ *   - ancestor x: x의 부모부터 루트까지 조상들을 차례로 출력(루트면 0).
+ * [핵심] parent 포인터를 따라 루트까지 거슬러 올라가며 출력.
+ */
 #include <iostream>
 #include <list>
 #include <vector>

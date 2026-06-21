@@ -1,3 +1,10 @@
+/*
+ * 09-heap / q2.cpp
+ * ------------------------------------------------------------
+ * [문제] 배열 기반 이진 최소 힙(min-heap)  (q1의 변형)
+ *   - 명령: push v / pop(최솟값 제거) / top / size / print
+ * [핵심] q1과 동일 구조, compare가 left<right이라 최소 힙으로 동작.
+ */
 #include <iostream>
 #include <string>
 #include <vector>
