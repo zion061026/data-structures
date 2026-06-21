@@ -1,0 +1,17 @@
+# 빌드 산출물
+*.o
+*.obj
+*.out
+*.exe
+*.pdb
+out
+a.out
+# Visual Studio
+.vs/
+x64/
+Debug/
+Release/
+*.vcxproj.user
+# OS/IDE
+.vscode/
+.DS_Store
